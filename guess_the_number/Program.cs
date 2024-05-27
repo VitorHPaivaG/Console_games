@@ -4,6 +4,7 @@
 //colocar um sistema de billboard, e sempre que o jogo acabar, retorne um placarScore var direto da função, pra ser
 //adicionado na main tipo assim: static int GuessTheNumber() /return placarScore;
 //colocar nome de usuario/s e fazer como se fosse uma grande central de minijogos single or multiplayer local
+//add an roll the dices game (take from my other repo just about that)
 
 namespace guess_the_number
 {
