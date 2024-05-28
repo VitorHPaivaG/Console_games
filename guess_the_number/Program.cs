@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 
 //colocar um sistema de billboard, e sempre que o jogo acabar, retorne um placarScore var direto da função, pra ser
@@ -12,33 +13,51 @@ namespace guess_the_number
         static void Main()
         {
             Console.Title = "Lucky games";
-            string userGameChoice;
+            string userGameChoice = string.Empty;
+            bool stillChoosing = true;
+            int clearenceTimer = 1000;
 
-            Console.WriteLine("We have these console games for now: ");
-            Console.WriteLine("1 - GuessTheNumber");
-            Console.WriteLine("2 - Coin-Flip");
-            Console.WriteLine("3 - Fizzbuzz");
-            Console.WriteLine("");
-
-            Console.Write("Which game do you want to play?: ");
-            userGameChoice = Console.ReadLine();
-
-            if (userGameChoice == "1")
+            while (stillChoosing)
             {
-                GuessTheNumber();
-            }
-            else if (userGameChoice == "2")
-            {
-                CoinFlip();
-            }
-            else if (userGameChoice == "3")
-            {
-                FizzBuzz();
-            }
+                Console.Clear();
 
+                Console.WriteLine("We have these console games for now: \n");
+                Console.WriteLine("1 - GuessTheNumber");
+                Console.WriteLine("2 - Coin-Flip");
+                Console.WriteLine("3 - Fizzbuzz");
+                Console.WriteLine("4 - RollTheDices");
 
-            Console.WriteLine("Press any key to close the program. . .");
-            Console.ReadKey(true);
+                Console.Write("Which game do you want to play? [type E to close the console]: ");
+                userGameChoice = Console.ReadLine().ToUpper();
+
+                if (userGameChoice == "1")
+                {
+                    GuessTheNumber();
+                }
+                else if (userGameChoice == "2")
+                {
+                    CoinFlip();
+                }
+                else if (userGameChoice == "3")
+                {
+                    FizzBuzz();
+                }
+                else if (userGameChoice == "4")
+                {
+                    RollTheDices();
+                }
+                else if (userGameChoice == "E")
+                {
+                    Console.WriteLine("Press any key to close the program. . .");
+                    Console.ReadKey(true);
+                    stillChoosing = false;
+                }
+                else
+                {
+                    Console.WriteLine("Wrong parameter, try again.");
+                    Thread.Sleep(clearenceTimer);
+                }
+            }
         }
         static void GuessTheNumber()
         {
@@ -195,8 +214,113 @@ namespace guess_the_number
                 Console.WriteLine("You must enter a valid parameter. Try again.");
             }
         }
+
+        //better write
+        //more lucky games?
+        //ask if the user wants to play again the game
+        //do a total of games won by the player and the machine (if he want to play again ofc)
+        //ask the user an name, or use the default = "player"
+        static void RollTheDices()
+        {
+            int playerDiceRoll = 0,
+                machineDiceRoll = 0,
+                playerPoints = 0,
+                machinePoints = 0,
+                playerPointsTotalDiceSum = 0,
+                machinePointsTotalDiceSum = 0,
+                sleepingDelay = 800,
+                turnCounter = 1;
+
+            Random random = new Random();
+
+            Console.Write("How many turn do you want to play?: ");
+            int userChoosenTurns = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < userChoosenTurns; i++)
+            {
+                playerDiceRoll = random.Next(1, 7);
+
+                Console.WriteLine("==============================");
+                Console.WriteLine("Press enter to roll the dices!");
+                Console.WriteLine("==============================");
+                Console.ReadLine();
+
+                Thread.Sleep(sleepingDelay);
+
+                Console.WriteLine("================");
+                Console.WriteLine($"this is turn: {turnCounter++}");
+                Console.WriteLine("================");
+
+
+                Console.WriteLine($"player rolled a: {playerDiceRoll}");
+                playerPointsTotalDiceSum += playerDiceRoll;
+
+                machineDiceRoll = random.Next(1, 7);
+                Console.WriteLine($"machine rolled a: {machineDiceRoll}");
+                machinePointsTotalDiceSum += machineDiceRoll;
+
+                Console.WriteLine("");
+
+                if (playerDiceRoll == machineDiceRoll)
+                {
+                    playerDiceRoll--;
+                    machineDiceRoll--;
+                }
+                else if (playerDiceRoll > machineDiceRoll)
+                {
+                    playerPoints++;
+                }
+                else
+                {
+                    machinePoints++;
+                }
+            }
+
+            Console.WriteLine("==============================");
+            Console.WriteLine("End of the game! The results..");
+            Console.WriteLine("==============================");
+
+            Console.WriteLine("");
+
+            Thread.Sleep(sleepingDelay);
+
+            Console.WriteLine($"player rounds score: {playerPoints}\nmachine rounds score: {machinePoints}");
+
+            Console.WriteLine("");
+
+            if (playerPoints > machinePoints)
+            {
+                Console.WriteLine("=====================");
+                Console.WriteLine("player wons the game!");
+                Console.WriteLine("=====================");
+
+            }
+            else if (playerPoints == machinePoints)
+            {
+                Console.WriteLine("==============");
+                Console.WriteLine("that´s a draw!");
+                Console.WriteLine("==============");
+            }
+            else
+            {
+                Console.WriteLine("=========================");
+                Console.WriteLine("the machine wons the game");
+                Console.WriteLine("=========================");
+            }
+
+            Console.WriteLine("");
+
+            Console.WriteLine($"the total of sides points the player earned through the dice was: {playerPointsTotalDiceSum}");
+            Console.WriteLine($"the total of sides points the machine earned through the dice was: {machinePointsTotalDiceSum}");
+
+            Console.Write("This is the end of the game! Press any key to continue. . .");
+            Console.ReadKey(true);
+        }
     }
 }
+
+
+
 
 
 
