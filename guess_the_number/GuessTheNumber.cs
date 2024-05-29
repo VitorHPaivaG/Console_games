@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     internal class GuessTheNumber
     {
@@ -14,9 +14,9 @@ namespace guess_the_number
             bool stillPlaying = true;
             int userNumberDelimiter;
 
-            Console.Write("Please enter a number for the limiter (Example: 1 to X (X = 20)): ");
+            Console.Write("Please enter a number for the limiter (Example: 1 to X [X = 20] ): ");
 
-            while (!int.TryParse(Console.ReadLine(), out userNumberDelimiter) || (userNumberDelimiter <= 0))//working
+            while (!int.TryParse(Console.ReadLine(), out userNumberDelimiter) || (userNumberDelimiter <= 0))
             {
                 Console.Clear();
                 Console.Write("The number delimiter must not be negative or equals to 0\n");

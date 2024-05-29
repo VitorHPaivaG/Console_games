@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 //colocar nome de usuario/s e fazer como se fosse uma grande central de minijogos single or multiplayer local
 //add an roll the dices game (take from my other repo just about that)
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     internal class Users
     {

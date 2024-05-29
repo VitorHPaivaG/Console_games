@@ -2,7 +2,7 @@
 using System.Net.Http.Headers;
 using System.Threading;
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     class Program
     {

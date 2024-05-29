@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 //colocar um sistema de billboard, e sempre que o jogo acabar, retorne um placarScore var direto da função, pra ser
 //adicionado na main tipo assim: static int GuessTheNumber() /return placarScore;
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     internal class Scoreboard
     {

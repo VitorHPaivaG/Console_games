@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     internal class CoinFlip
     {
@@ -33,10 +33,14 @@ namespace guess_the_number
                     if (userCoinSide == flippedSide)
                     {
                         Console.WriteLine($"It´s {(flippedSide == heads ? "heads" : "tails")}, the player won");
+                        Console.ReadKey(true);
+                        stillPlaying = false;
                     }
                     else
                     {
                         Console.WriteLine($"It´s {(flippedSide == heads ? "heads" : "tails")}, the player lose");
+                        Console.ReadKey(true);
+                        stillPlaying = false;
                     }
                 }
             }

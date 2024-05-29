@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guess_the_number", "guess_the_number\guess_the_number.csproj", "{20F3DC29-3C28-4148-AB0D-EDA5FA176E74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGames", "guess_the_number\ConsoleGames.csproj", "{20F3DC29-3C28-4148-AB0D-EDA5FA176E74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

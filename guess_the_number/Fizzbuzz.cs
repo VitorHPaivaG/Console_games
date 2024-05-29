@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace guess_the_number
+namespace ConsoleGames
 {
     internal class Fizzbuzz
     {
@@ -19,7 +19,8 @@ namespace guess_the_number
 
             Console.WriteLine("Fizzbuzz is a game about math, basically these are the rules: ");
             Console.WriteLine("Every num divisible by 3 is Fizz, by 5 is buzz and by both 3 & 5 is Fizzbuzz!");
-            Console.WriteLine("We have two options for the game, the automatic one [1]: Just enter a delimiter number, and watch");
+            Console.WriteLine("We have two options for the game: \n");
+            Console.WriteLine("the automatic one [1]: Just enter a delimiter number, and watch");
             Console.WriteLine("The manual [2]: here you actually will enter if the number is a fizz/buzz/fizzbuzz or none of them");
 
             Console.Write("\nWhat is gonna be for now?: ");
@@ -60,6 +61,7 @@ namespace guess_the_number
                                 stillPlaying = false;
                             }
                         }
+                        Console.ReadKey(true);
                     }
                 }
             }
@@ -86,6 +88,7 @@ namespace guess_the_number
                         }
                     }
                 }
+                Console.ReadKey(true);
             }
             else
             {
