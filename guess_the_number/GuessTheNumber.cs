@@ -14,7 +14,7 @@ namespace ConsoleGames
             bool stillPlaying = true;
             int userNumberDelimiter;
 
-            Console.Write("Please enter a number for the limiter (Example: 1 to X [X = 20] ): ");
+            Console.Write("Please enter a number for the delimiter (Example: 1 to 20): ");
 
             while (!int.TryParse(Console.ReadLine(), out userNumberDelimiter) || (userNumberDelimiter <= 0))
             {
