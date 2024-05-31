@@ -18,6 +18,10 @@
 
 #an username system, that allows other local players to enter names, and play, all player scores would be stored into a scoreboard and a leaderboard
 #The scoreboard and leaderboard system
+#Make a tic-tac-toe game
+#Make a chess game
+#Make a hangman game
+#RPG game (prob gonna work on this in another project)
 
 -- Notes --
 
