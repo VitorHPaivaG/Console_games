@@ -5,7 +5,6 @@ namespace ConsoleGames
 {
     internal class RollTheDices
     {
-        //ask if the user wants to play again the game
         public void RollTheDicesGame()
         {
             int playerDiceRoll = 0,

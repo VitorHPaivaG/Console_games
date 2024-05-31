@@ -29,7 +29,7 @@ namespace ConsoleGames
 
             while (stillPlaying)
             {
-                int userGuess = Convert.ToInt32(Console.ReadLine());
+                int userGuess = Convert.ToInt32(Console.ReadLine());//tryparse
                 if (userGuess == correctGuess)
                 {
                     Console.WriteLine($"Congrats, you´ve find the correct number: {correctGuess}");

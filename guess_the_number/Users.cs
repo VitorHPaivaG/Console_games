@@ -11,5 +11,13 @@ namespace ConsoleGames
 {
     internal class Users
     {
+        public string Name { get; set; }
+
+        public Users() { }
+
+        public Users(string _name)
+        {
+            Name = _name;
+        }
     }
 }

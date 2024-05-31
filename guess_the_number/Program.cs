@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http.Headers;
+using System.Security.Cryptography;
 using System.Threading;
 
 //teste maroto
@@ -15,10 +16,20 @@ namespace ConsoleGames
             string userGameChoice = string.Empty;
             bool stillChoosing = true;
             int clearenceTimer = 1000;
+            string userName = string.Empty;
+
+            Console.Write("Welcome! Before we start, please enter your nickname: ");
+
+            while (string.IsNullOrEmpty(Console.ReadLine(userName)) || userName.Length > 25 || userName <= 3)
+            {
+                Console.Write("We need a valid name! Please, try again: ");
+            }
 
             while (stillChoosing)
             {
                 Console.Clear();
+
+                Console.Write("Welcome to the games table {userName}! We hope you enjoy your time here\n", userName);
 
                 Console.WriteLine("We have these console games for now: \n");
                 Console.WriteLine("1 - GuessTheNumber");
