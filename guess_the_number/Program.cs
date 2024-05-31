@@ -7,14 +7,13 @@ namespace ConsoleGames
 {
     class Program
     {
-        //arrumar essa interface que está pessima
         static void Main()
         {
             Console.Title = "Lucky games";
-            string userGameChoice = string.Empty;
+            string userGameChoice;
             bool stillChoosing = true;
             int clearenceTimer = 1000;
-            string userName = string.Empty;
+            string userName;
 
             Console.Write("Welcome! Before we start, please enter your nickname: ");
 
@@ -25,6 +24,7 @@ namespace ConsoleGames
 
             while (stillChoosing)
             {
+                Thread.Sleep(clearenceTimer);
                 Console.Clear();
 
                 Console.Write($"Welcome to the games table {userName}! We hope you enjoy your time here. . .\n");
