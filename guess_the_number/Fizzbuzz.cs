@@ -4,8 +4,6 @@ namespace ConsoleGames
 {
     internal class Fizzbuzz
     {
-        //make an option for the automatic one, and an option for the user actually enter if he thinks its fizz or buzz or fizbuzz
-        //and just press enter if its none of them
         public void FizzBuzz()
         {
             int fizz = 3,
@@ -15,7 +13,6 @@ namespace ConsoleGames
             bool stillPlaying = true;
 
             string userAnswerGuess = string.Empty;
-
 
             Console.WriteLine("Fizzbuzz is a game about math, basically these are the rules: ");
             Console.WriteLine("Every num divisible by 3 is Fizz, by 5 is buzz and by both 3 & 5 is Fizzbuzz!");
