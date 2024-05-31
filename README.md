@@ -1,5 +1,3 @@
-A bunch of simple games that runs on console, with the C# language. It´s more to learning purposes than an ambitious project or something like that
-
 -- Currently avaiable games --
 (may misspell something, my english is a bit rusty nowadays)
 
@@ -18,4 +16,4 @@ A bunch of simple games that runs on console, with the C# language. It´s more t
 
 -- Notes --
 
-#pretty simple project, just for learning purposes, not something really ambitious or things like that. Hoping to get a job someday.
+#this is just for learning purposes
