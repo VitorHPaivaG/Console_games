@@ -13,5 +13,16 @@ namespace ConsoleGames
     internal class Scoreboard
     {
         //para cada jogo, terá um scoreboard com somatoria de pontos/vezes jogadas/vezes que ganhou ou perdeu e etc
+        public int Score;
+        public int TimesPlayed;
+        public int TimesWon;
+        public int TimesLost;
+
+        public Scoreboard() { }
+        public Scoreboard(//analise) 
+        {
+            
+        }
+
     }
 }

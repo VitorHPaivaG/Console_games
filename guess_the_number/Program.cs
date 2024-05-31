@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Net.Http.Headers;
-using System.Security.Cryptography;
 using System.Threading;
 
 //teste maroto
@@ -20,7 +18,7 @@ namespace ConsoleGames
 
             Console.Write("Welcome! Before we start, please enter your nickname: ");
 
-            while (string.IsNullOrEmpty(Console.ReadLine(userName)) || userName.Length > 25 || userName <= 3)
+            while (string.IsNullOrEmpty(userName = Console.ReadLine()) || userName.Length > 25 || userName.Length <= 3)
             {
                 Console.Write("We need a valid name! Please, try again: ");
             }
@@ -29,9 +27,9 @@ namespace ConsoleGames
             {
                 Console.Clear();
 
-                Console.Write("Welcome to the games table {userName}! We hope you enjoy your time here\n", userName);
+                Console.Write($"Welcome to the games table {userName}! We hope you enjoy your time here. . .\n");
 
-                Console.WriteLine("We have these console games for now: \n");
+                Console.WriteLine("\nWe have these console games for now: \n");
                 Console.WriteLine("1 - GuessTheNumber");
                 Console.WriteLine("2 - Coin-Flip");
                 Console.WriteLine("3 - Fizzbuzz");
