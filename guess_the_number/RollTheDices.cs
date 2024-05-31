@@ -7,8 +7,8 @@ namespace ConsoleGames
     {
         public void RollTheDicesGame()
         {
-            int playerDiceRoll = 0,
-                machineDiceRoll = 0,
+            int playerDiceRoll,
+                machineDiceRoll,
                 playerPoints = 0,
                 machinePoints = 0,
                 playerPointsTotalDiceSum = 0,
@@ -113,6 +113,7 @@ namespace ConsoleGames
                 }
                 else if (playAgain.Equals("Y"))
                 {
+                    turnCounter = 1;
                     Console.Write("Press any key to play again!\n");
                     Console.ReadKey(true);
                 }
