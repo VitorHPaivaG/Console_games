@@ -19,10 +19,5 @@ namespace ConsoleGames
         public int TimesLost;
 
         public Scoreboard() { }
-        public Scoreboard(//analise) 
-        {
-            
-        }
-
     }
 }
