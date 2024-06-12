@@ -34,6 +34,7 @@ namespace ConsoleGames
                 Console.WriteLine("2 - Coin-Flip");
                 Console.WriteLine("3 - Fizzbuzz");
                 Console.WriteLine("4 - RollTheDices");
+                Console.WriteLine("5 - ReversedText");//reverse a random word in a array/list of words, and the user guesses the word
 
                 Console.Write("Which game do you want to play? [type E to close the console]: ");
                 userGameChoice = Console.ReadLine().ToUpper();
@@ -58,6 +59,11 @@ namespace ConsoleGames
                 {
                     RollTheDices rollthedices = new RollTheDices();
                     rollthedices.RollTheDicesGame();
+                }
+                else if (userGameChoice == "5") 
+                {
+                    ReversedText reversedText = new ReversedText();
+                    reversedText.ReversedTextGame();
                 }
                 else if (userGameChoice == "E")
                 {
